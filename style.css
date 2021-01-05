@@ -80,8 +80,8 @@ input[type="submit"]:hover{
 
 
 .navsection{
-    background-color: #999999;
-   
+    background: none repeat scroll 0 0 #999999;
+    height: 38px;
 }
 .navsection ul{
     padding: 0px;
@@ -89,24 +89,52 @@ input[type="submit"]:hover{
     list-style: none;
 }
 .navsection ul li{
+    border-left: 1px solid rgb(206, 198, 198);
+    border-right: 1px solid rgb(124, 114, 114);
     display: block;   
     float: left;
+    position: relative;
     
 }
+.navsection ul li:first-child{
+    border-left: 0px solid #000;
+}
+.navsection ul li:last-child{
+    border-right: 0px solid #000;
+}
 .navsection ul li a{
-    background: #cdcbcc;
+    /*background: #cdcbcc;*/
     color: #444;
     display: block;
     font-size: 15px;
     font-weight: bold;
-    margin: 5px;
-    padding: 5px 30px;
+   /* margin: 5px;*/
+    padding: 10px 30px;
     text-decoration: none;
 }
 .navsection ul li a:hover, #active{
     background: #30c351;
     color: #fff;
 }
+.navsection ul li ul{
+    position: absolute;
+    left: -999999px;
+    z-index: 999;
+}
+.navsection ul li:hover ul{
+   left:0px;
+}
+.navsection ul li ul li{
+    background: #999;
+    width: 150px;
+    border-bottom:1px solid #444;
+    border-left: 0px solid rgb(206, 198, 198);
+    border-right: 0px solid rgb(124, 114, 114);
+}
+.navsection ul li ul li:last-child{ border-bottom:0px solid #444;
+}
+.navsection ul li ul li a{}
+
 .slidersection{
     margin-bottom: 5px;
     box-shadow: 0px 4px 3px 0px #777474;
